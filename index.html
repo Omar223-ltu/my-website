@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        video {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support videos.
+    </video>
+
+    <div class="content">
+        <h1>My Video Background Website</h1>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Interaktiv navigering</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            background-color: #3c486b;
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #f0c3cb;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        section {
+            height: 100vh;
+            padding-top: 70px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        #hem { background-color: #f4f7fa; }
+        #forberedelser { background-color: #e0e5ec; }
+        #framja { background-color: #ccd3e0; }
+        #ekologisk { background-color: #b8c1d4; }
+        #omoss { background-color: #a3afc8; }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#hem">Hem</a>
+    <a href="#forberedelser">Förberedelser</a>
+    <a href="#framja">Främja lokalbefolkningen</a>
+    <a href="#ekologisk">Ekologisk hållbarhet</a>
+    <a href="#omoss">Om oss</a>
+</nav>
+
+<section id="hem">Hem</section>
+<section id="forberedelser">Förberedelser</section>
+<section id="framja">Främja lokalbefolkningen</section>
+<section id="ekologisk">Ekologisk hållbarhet</section>
+<section id="omoss">Om oss</section>
+
+</body>
+</html>
