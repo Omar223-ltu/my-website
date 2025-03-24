@@ -57,6 +57,23 @@
             flex-direction: column;
             padding-top: 0;
         }
+
+        /* Hide section names visually but keep them for scrolling */
+        #hem::before,
+        #forberedelser::before,
+        #framja::before,
+        #ekologisk::before,
+        #omoss::before {
+            content: "";
+            display: block;
+            height: 70px;
+            margin-top: -70px;
+            visibility: hidden;
+        }
+
+        #hem, #forberedelser, #framja, #ekologisk, #omoss {
+            font-size: 0; /* hide text */
+        }
     </style>
 </head>
 <body>
@@ -78,10 +95,10 @@
         <p>Bläddra ner för att utforska mer</p>
     </section>
 
-    <section id="hem">Hem</section>
-    <section id="forberedelser">Förberedelser</section>
-    <section id="framja">Främja lokalbefolkningen</section>
-    <section id="ekologisk">Ekologisk hållbarhet</section>
-    <section id="omoss">Om oss</section>
+    <section id="hem"></section>
+    <section id="forberedelser"></section>
+    <section id="framja"></section>
+    <section id="ekologisk"></section>
+    <section id="omoss"></section>
 </body>
 </html>
