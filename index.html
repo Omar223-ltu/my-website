@@ -39,7 +39,7 @@
         }
 
         section {
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
             font-size: 2rem;
             display: flex;
@@ -47,13 +47,13 @@
             align-items: center;
             transition: background-color 1s ease;
             position: relative;
+            flex-direction: column;
         }
 
         #start {
             padding-top: 70px;
             background: transparent;
             z-index: 1;
-            flex-direction: column;
             position: relative;
         }
 
@@ -100,34 +100,64 @@
 
         #forberedelser {
             background-color: #2d3e5c;
-            flex-direction: column;
-            align-items: center;
             padding: 100px 40px;
-            text-align: center;
+        }
+
+        .packing-list {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .packing-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .packing-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .packing-list input[type="text"] {
+            width: 60%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .packing-list input[type="number"] {
+            width: 50px;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .packing-list button {
+            background-color: #3c486b;
+            color: #fff;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
         }
 
         #framja { background-color: #405173; }
         #ekologisk { background-color: #58678a; }
         #omoss { background-color: #7a89a1; }
 
-        #forberedelser h2,
-        #framja h2,
-        #ekologisk h2,
-        #omoss h2 {
+        h2 {
             color: white;
             font-size: 2.5rem;
             margin-bottom: 20px;
-        }
-
-        .pack-button {
-            background-color: #f0c3cb;
-            color: #3c486b;
-            padding: 12px 25px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
         }
     </style>
 </head>
@@ -143,7 +173,6 @@
         <a href="#framja">Främja lokalbefolkningen</a>
         <a href="#ekologisk">Ekologisk hållbarhet</a>
         <a href="#omoss">Om oss</a>
-        <a href="packningslista.html">Packningslista</a>
     </nav>
 
     <section id="start">
@@ -155,8 +184,15 @@
     </section>
 
     <section id="forberedelser">
-        <h2>Förberedelser</h2>
-        <a class="pack-button" href="packningslista.html">Skapa din packningslista</a>
+        <h2>Skapa din packningslista</h2>
+        <div class="packing-list">
+            <ul id="packingItems"></ul>
+            <div style="margin-top: 15px;">
+                <input type="text" id="itemName" placeholder="Skriv sak...">
+                <input type="number" id="itemCount" value="1" min="1">
+                <button onclick="addItem()">Lägg till</button>
+            </div>
+        </div>
     </section>
 
     <section id="framja">
@@ -168,6 +204,23 @@
     <section id="omoss">
         <h2>Om oss</h2>
     </section>
+
+    <script>
+        function addItem() {
+            const name = document.getElementById('itemName').value.trim();
+            const count = document.getElementById('itemCount').value;
+            if (!name || count < 1) return;
+
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${name}</span>
+                <span>${count}x <button onclick="this.parentElement.parentElement.remove()">Ta bort</button></span>
+            `;
+            document.getElementById('packingItems').appendChild(li);
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemCount').value = 1;
+        }
+    </script>
 </body>
 </html>
 
