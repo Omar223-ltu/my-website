@@ -98,7 +98,15 @@
             cursor: pointer;
         }
 
-        #forberedelser { background-color: #2d3e5c; }
+        #forberedelser {
+            background-color: #2d3e5c;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 100px 40px;
+            text-align: left;
+            overflow-y: auto;
+        }
+
         #framja { background-color: #405173; }
         #ekologisk { background-color: #58678a; }
         #omoss { background-color: #7a89a1; }
@@ -109,18 +117,41 @@
         #omoss h2 {
             color: white;
             font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
-        #start::before,
-        #forberedelser::before,
-        #framja::before,
-        #ekologisk::before,
-        #omoss::before {
-            content: "";
-            display: block;
-            height: 70px;
-            margin-top: -70px;
-            visibility: hidden;
+        .packing-list {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .packing-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .packing-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .packing-list input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .packing-list input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -148,7 +179,18 @@
 
     <section id="forberedelser">
         <h2>Förberedelser</h2>
+        <div class="packing-list">
+            <ul id="packingItems">
+                <li><label><input type="checkbox"> Vandringsskor</label><span>1x</span></li>
+                <li><label><input type="checkbox"> Regnjacka</label><span>1x</span></li>
+                <li><label><input type="checkbox"> Mössa</label><span>1x</span></li>
+                <li><label><input type="checkbox"> Vantar</label><span>1x</span></li>
+                <li><label><input type="checkbox"> Vattenflaska</label><span>1x</span></li>
+            </ul>
+            <input type="text" id="newItem" placeholder="Lägg till sak..." onkeydown="addItem(event)">
+        </div>
     </section>
+
     <section id="framja">
         <h2>Främja lokalbefolkningen</h2>
     </section>
@@ -158,7 +200,23 @@
     <section id="omoss">
         <h2>Om oss</h2>
     </section>
+
+    <script>
+        function addItem(event) {
+            if (event.key === "Enter") {
+                const text = event.target.value.trim();
+                if (text) {
+                    const ul = document.getElementById("packingItems");
+                    const li = document.createElement("li");
+                    li.innerHTML = `<label><input type="checkbox"> ${text}</label><span>1x</span>`;
+                    ul.appendChild(li);
+                    event.target.value = "";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
+
 
 
