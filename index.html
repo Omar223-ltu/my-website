@@ -82,15 +82,12 @@
       background: #fff;
       border-radius: 15px;
       overflow: hidden;
-      width: 350px;
+      width: 300px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    .card img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
+    $1height: 280px;$2
     }
 
     .card h3 {
@@ -143,6 +140,60 @@
       opacity: 1;
       transform: translateY(0);
     }
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 0.9rem;
+      }
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+      }
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+      #start img {
+        max-width: 90%;
+      }
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 0.9rem;
+      }
+
+      .grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .card img {
+        height: auto;
+        max-height: 250px;
+      }
+
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+
+      #start img {
+        max-width: 90%;
+      }
+
+      .start-controls button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
 </style>
 </head>
 <body>
@@ -160,7 +211,7 @@
 </nav>
 
   <section id="start">
-    <img src="fjallkortet-logo-transparent.png" alt="Fjällkortet logo">
+    <img src="fjallkortet-logo.png" alt="Fjällkortet logo">
   <div class="start-controls" style="position: absolute; bottom: 40px; display: flex; flex-direction: column; align-items: center;">
       <button onclick="document.getElementById('forberedelser').scrollIntoView({ behavior: 'smooth' });" style="padding: 10px 20px; background-color: #3c486b; color: #f0c3cb; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Utforska mer</button>
       <div class="scroll-down" style="margin-top: 15px; width: 30px; height: 30px; border: solid white; border-width: 0 3px 3px 0; transform: rotate(45deg); animation: bounce 2s infinite;"></div>
@@ -168,15 +219,15 @@
   </section>
 
   <section id="forberedelser" style="background-color: #2d3e5c; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
-  <h2 class="fade-in">Förberedelser</h2>
+  <h1 class="fade-in">Förberedelser</h1>
   <div class="grid" style="margin-top: 20px;">
     <div class="card">
-      <img src="packing.png" alt="Packningslista">
+      <img src="images/packing.jpg" alt="Packningslista">
       <h3>Packningslista</h3>
       <a href="packningslista.html">Skapa din packningslista</a>
     </div>
     <div class="card">
-      <img src="Destination.png" alt="Destination">
+      <img src="images/destination.jpg" alt="Destination">
       <h3>Destination</h3>
       <a href="destination.html">Att välja destination</a>
     </div>
@@ -223,6 +274,7 @@
 </script>
 </body>
 </html>
+
 
 
 
