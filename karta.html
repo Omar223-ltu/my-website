@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Interaktiv Karta – Lokalbefolkningar i Norra Sverige</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+e2tGDLpWmdYwHcMdL1fHsW3YyZIwM0s4mnR2wCGA=" 
+    crossorigin=""
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .popup-content {
+      max-width: 300px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script 
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-o9N1jrvv2GZPNqgakqbP2GVr5cZ0pniNXyM1g1LwRVs="
+  crossorigin="">
+</script>
+
+<script>
+  const map = L.map('map').setView([66.5, 20.5], 5.2);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap medverkande'
+  }).addTo(map);
+
+  const groups = [
+    {
+      name: "Samerna",
+      coords: [ [68.5, 19.5], [68.3, 23.5], [67.5, 24.5], [66.8, 21.5], [67.2, 19.5] ],
+      color: "#a6c8e0",
+      content: "<h3>Samerna</h3><p>Sveriges ursprungsbefolkning. Bosatta i norra Norrbotten och Västerbotten. Traditionell kultur med renskötsel och samiska språk.</p>"
+    },
+    {
+      name: "Tornedalingar",
+      coords: [ [67.9, 23.5], [67.9, 24.1], [66.8, 24.1], [66.8, 23.5] ],
+      color: "#c2d7ee",
+      content: "<h3>Tornedalingar</h3><p>Nationell minoritet i Tornedalen, längs Torne älv. Talar meänkieli, stark finsk-svensk kultur.</p>"
+    },
+    {
+      name: "Kväner",
+      coords: [ [69.0, 21.0], [69.0, 23.0], [68.6, 23.0], [68.6, 21.0] ],
+      color: "#d8e6f4",
+      content: "<h3>Kväner</h3><p>Härstammar från finska bönder/fiskare. Större närvaro i Nordnorge, men har historiska kopplingar till nordligaste Sverige.</p>"
+    },
+    {
+      name: "Sverigefinnar",
+      coords: [ [65.8, 19.0], [65.8, 21.0], [65.2, 21.0], [65.2, 19.0] ],
+      color: "#e6eff9",
+      content: "<h3>Sverigefinnar</h3><p>Personer med finskt ursprung bosatta i Sverige, främst i norra delen. Tvåkulturell identitet.</p>"
+    }
+  ];
+
+  groups.forEach(group => {
+    L.polygon(group.coords, {
+      color: '#3c486b',
+      fillColor: group.color,
+      fillOpacity: 0.6
+    }).addTo(map)
+      .bindPopup(`<div class="popup-content">${group.content}</div>`);
+  });
+</script>
+
+</body>
+</html>

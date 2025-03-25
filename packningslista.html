@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packningslista</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3c486b;
+        }
+
+        .packing-list {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .packing-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .packing-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .packing-list input[type="text"] {
+            width: 60%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .packing-list input[type="number"] {
+            width: 50px;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .packing-list button {
+            background-color: #3c486b;
+            color: #fff;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .back-link {
+            display: block;
+            margin: 30px auto;
+            width: fit-content;
+            text-align: center;
+            text-decoration: none;
+            color: #3c486b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Min Packningslista</h1>
+    <div class="packing-list">
+        <ul id="packingItems"></ul>
+        <div style="margin-top: 15px;">
+            <input type="text" id="itemName" placeholder="Skriv sak...">
+            <input type="number" id="itemCount" value="1" min="1">
+            <button onclick="addItem()">Lägg till</button>
+        </div>
+    </div>
+
+    <a class="back-link" href="index.html">&#8592; Tillbaka till startsidan</a>
+
+    <script>
+        function addItem() {
+            const name = document.getElementById('itemName').value.trim();
+            const count = document.getElementById('itemCount').value;
+            if (!name || count < 1) return;
+
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span>${name}</span>
+                <span>${count}x <button onclick="this.parentElement.parentElement.remove()">Ta bort</button></span>
+            `;
+            document.getElementById('packingItems').appendChild(li);
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemCount').value = 1;
+        }
+    </script>
+</body>
+</html>
