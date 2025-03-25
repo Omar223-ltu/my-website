@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_66dfd7bdc5bec0c2b479f6525a215da9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_66dfd7bdc5bec0c2b479f6525a215da9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_66dfd7bdc5bec0c2b479f6525a215da9 = L.map(
+                "map_66dfd7bdc5bec0c2b479f6525a215da9",
+                {
+                    center: [67.5, 20.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b89976c5d3e17e1c58d09462469e19ab = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+            var circle_marker_af9acfc5c9f8778f0cd1f747c2cfc24e = L.circleMarker(
+                [67.32, 18.14],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_ec4ad2fe4e4484a2cb2608dd1d164b99 = L.popup({"maxWidth": 200});
+
+        
+            var html_3760ea2ae2743930584f3955dec1794e = $(`<div id="html_3760ea2ae2743930584f3955dec1794e" style="width: 100.0%; height: 100.0%;"><b>Fågelskyddsområde - Laponia</b></div>`)[0];
+            popup_ec4ad2fe4e4484a2cb2608dd1d164b99.setContent(html_3760ea2ae2743930584f3955dec1794e);
+        
+
+        circle_marker_af9acfc5c9f8778f0cd1f747c2cfc24e.bindPopup(popup_ec4ad2fe4e4484a2cb2608dd1d164b99)
+        ;
+
+        
+    
+    
+            var circle_marker_1f14f832cede32253ac8d7db0a9301ac = L.circleMarker(
+                [66.05, 17.95],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_9e94c64b44adabf6500316a5a3619a7b = L.popup({"maxWidth": 200});
+
+        
+            var html_5dd1405afe4b7069015ab9c6c94569dc = $(`<div id="html_5dd1405afe4b7069015ab9c6c94569dc" style="width: 100.0%; height: 100.0%;"><b>Renskötselområde - Arjeplog</b></div>`)[0];
+            popup_9e94c64b44adabf6500316a5a3619a7b.setContent(html_5dd1405afe4b7069015ab9c6c94569dc);
+        
+
+        circle_marker_1f14f832cede32253ac8d7db0a9301ac.bindPopup(popup_9e94c64b44adabf6500316a5a3619a7b)
+        ;
+
+        
+    
+    
+            var circle_marker_d330086b2685c0ee50b8090be8b2cc6e = L.circleMarker(
+                [65.95, 16.35],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_c795e1cfc619db63828f9660d61d774a = L.popup({"maxWidth": 200});
+
+        
+            var html_8c03097f4dedfcef6318dc409dab10ed = $(`<div id="html_8c03097f4dedfcef6318dc409dab10ed" style="width: 100.0%; height: 100.0%;"><b>Fjällrävsrevir - Vindelfjällen</b></div>`)[0];
+            popup_c795e1cfc619db63828f9660d61d774a.setContent(html_8c03097f4dedfcef6318dc409dab10ed);
+        
+
+        circle_marker_d330086b2685c0ee50b8090be8b2cc6e.bindPopup(popup_c795e1cfc619db63828f9660d61d774a)
+        ;
+
+        
+    
+    
+            var circle_marker_64b937b293a796c81b979aabc8a866e6 = L.circleMarker(
+                [65.78, 23.95],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_cc1bfc27ad07e95f5b2cb1c7bdd652bf = L.popup({"maxWidth": 200});
+
+        
+            var html_7d96e4956b5d2a89e1e687afa99f2fd0 = $(`<div id="html_7d96e4956b5d2a89e1e687afa99f2fd0" style="width: 100.0%; height: 100.0%;"><b>Havsfågelskydd - Haparanda skärgård</b></div>`)[0];
+            popup_cc1bfc27ad07e95f5b2cb1c7bdd652bf.setContent(html_7d96e4956b5d2a89e1e687afa99f2fd0);
+        
+
+        circle_marker_64b937b293a796c81b979aabc8a866e6.bindPopup(popup_cc1bfc27ad07e95f5b2cb1c7bdd652bf)
+        ;
+
+        
+    
+    
+            var circle_marker_cf722deaa828f05f32c1473e123f4898 = L.circleMarker(
+                [67.31, 20.05],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_569145ccfe635988d1d77496014069e7 = L.popup({"maxWidth": 200});
+
+        
+            var html_ffb2789b705e5f2294db6d923956c62b = $(`<div id="html_ffb2789b705e5f2294db6d923956c62b" style="width: 100.0%; height: 100.0%;"><b>Känsligt våtmarksområde - Muddus</b></div>`)[0];
+            popup_569145ccfe635988d1d77496014069e7.setContent(html_ffb2789b705e5f2294db6d923956c62b);
+        
+
+        circle_marker_cf722deaa828f05f32c1473e123f4898.bindPopup(popup_569145ccfe635988d1d77496014069e7)
+        ;
+
+        
+    
+    
+            var circle_marker_796839ff2739a1bd1c008a1640a7af58 = L.circleMarker(
+                [66.2, 19.3],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_32719e70e3e5dc6cbb90d6db8b6a9061 = L.popup({"maxWidth": 200});
+
+        
+            var html_4e06814f0c5b86e89e10cca7e60521d7 = $(`<div id="html_4e06814f0c5b86e89e10cca7e60521d7" style="width: 100.0%; height: 100.0%;"><b>Ekosystemrestaurering - Piteälven</b></div>`)[0];
+            popup_32719e70e3e5dc6cbb90d6db8b6a9061.setContent(html_4e06814f0c5b86e89e10cca7e60521d7);
+        
+
+        circle_marker_796839ff2739a1bd1c008a1640a7af58.bindPopup(popup_32719e70e3e5dc6cbb90d6db8b6a9061)
+        ;
+
+        
+    
+    
+            var circle_marker_a95b1748857ee3d6fd3cd2da2d6c7a0e = L.circleMarker(
+                [67.28, 16.57],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_c86a146ac79e1447421d2766ee618803 = L.popup({"maxWidth": 200});
+
+        
+            var html_a062694c83fc3d6c73c6bdbf8fe49f6d = $(`<div id="html_a062694c83fc3d6c73c6bdbf8fe49f6d" style="width: 100.0%; height: 100.0%;"><b>Sällsynta växter - Padjelanta</b></div>`)[0];
+            popup_c86a146ac79e1447421d2766ee618803.setContent(html_a062694c83fc3d6c73c6bdbf8fe49f6d);
+        
+
+        circle_marker_a95b1748857ee3d6fd3cd2da2d6c7a0e.bindPopup(popup_c86a146ac79e1447421d2766ee618803)
+        ;
+
+        
+    
+    
+            var circle_marker_b1e788fe0bd9f8c2902f7579b9b4b471 = L.circleMarker(
+                [66.87, 19.8],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_1c86522d37d2d4a6cc516298b4eac353 = L.popup({"maxWidth": 200});
+
+        
+            var html_5585eec0fbba32682f942d8cae030487 = $(`<div id="html_5585eec0fbba32682f942d8cae030487" style="width: 100.0%; height: 100.0%;"><b>Ortsbundet rovfågelbo - Jokkmokk</b></div>`)[0];
+            popup_1c86522d37d2d4a6cc516298b4eac353.setContent(html_5585eec0fbba32682f942d8cae030487);
+        
+
+        circle_marker_b1e788fe0bd9f8c2902f7579b9b4b471.bindPopup(popup_1c86522d37d2d4a6cc516298b4eac353)
+        ;
+
+        
+    
+    
+            var circle_marker_ebc9391f411861efed50b39a1e9dc5ce = L.circleMarker(
+                [65.71, 15.29],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+        var popup_b779b3694541fafbfbbb6b2d50e5041a = L.popup({"maxWidth": 200});
+
+        
+            var html_95e9e415f30e40a57b45b5654c7aa3eb = $(`<div id="html_95e9e415f30e40a57b45b5654c7aa3eb" style="width: 100.0%; height: 100.0%;"><b>Skyddad lavflora - Tärnaby</b></div>`)[0];
+            popup_b779b3694541fafbfbbb6b2d50e5041a.setContent(html_95e9e415f30e40a57b45b5654c7aa3eb);
+        
+
+        circle_marker_ebc9391f411861efed50b39a1e9dc5ce.bindPopup(popup_b779b3694541fafbfbbb6b2d50e5041a)
+        ;
+
+        
+    
+    
+            var marker_6a6998ee0bbe96e4da25fa2739c908e0 = L.marker(
+                [68.358, 18.781],
+                {}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+            var icon_069ab8979cb589345e4686101c694e40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree-conifer", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6a6998ee0bbe96e4da25fa2739c908e0.setIcon(icon_069ab8979cb589345e4686101c694e40);
+        
+    
+            marker_6a6998ee0bbe96e4da25fa2739c908e0.bindTooltip(
+                `<div>
+                     Abisko Nationalpark
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6453cff5f7f5e8b5e33e95c5d263e44e = L.marker(
+                [67.85, 19.7],
+                {}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+            var icon_5982d59286b84df10ff55a3be8580f73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon-bed", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6453cff5f7f5e8b5e33e95c5d263e44e.setIcon(icon_5982d59286b84df10ff55a3be8580f73);
+        
+    
+            marker_6453cff5f7f5e8b5e33e95c5d263e44e.bindTooltip(
+                `<div>
+                     Tältplats - Nissonjåkka
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee1423d50801015f77dbe1635b1087ca = L.marker(
+                [67.9, 20.2],
+                {}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+            var icon_d6fd1d3f8ec487b1087841fc135c7131 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fire", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_ee1423d50801015f77dbe1635b1087ca.setIcon(icon_d6fd1d3f8ec487b1087841fc135c7131);
+        
+    
+            marker_ee1423d50801015f77dbe1635b1087ca.bindTooltip(
+                `<div>
+                     Eldplats - Torneträsk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_82242fda7bc23328c31b8dd2edf586da = L.marker(
+                [67.75, 20.0],
+                {}
+            ).addTo(map_66dfd7bdc5bec0c2b479f6525a215da9);
+        
+    
+            var icon_e50af8324c1e9fc5f6b04c1b3a11a027 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_82242fda7bc23328c31b8dd2edf586da.setIcon(icon_e50af8324c1e9fc5f6b04c1b3a11a027);
+        
+    
+            marker_82242fda7bc23328c31b8dd2edf586da.bindTooltip(
+                `<div>
+                     Dricksvattenkälla - Kärkevagge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var tile_layer_e5498c0e568d481613812d94033e64b1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_a3ae00998e4527d5c6632a606bcfa94d = new L.Control.MiniMap(
+                tile_layer_e5498c0e568d481613812d94033e64b1,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": true, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_66dfd7bdc5bec0c2b479f6525a215da9.addControl(mini_map_a3ae00998e4527d5c6632a606bcfa94d);
+        
+</script>
+</html>
