@@ -210,9 +210,9 @@
 
   <nav>
     <div class="logo">
-      <a href="#start"><img src="fjallkortet-logo-transparent.png" alt="Fjällkortet logotyp"></a>
+      <a href="#start"><img src="fjallkortet-logo-trans.png" alt="Fjällkortet logotyp"></a>
     </div>
-    <div class="nav-toggle" onclick="toggleMenu()">
+    <div class="nav-toggle" id="nav-toggle">
       <span></span>
       <span></span>
       <span></span>
@@ -227,10 +227,10 @@
   </nav>
 
   <script>
-    function toggleMenu() {
+    document.getElementById('nav-toggle').addEventListener('click', function () {
       const navLinks = document.getElementById('nav-links');
       navLinks.classList.toggle('show');
-    }
+    });
   </script>
 
   <section id="start">
