@@ -3,87 +3,57 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8">
-  <title>Interaktiv Karta – Lokalbefolkningar i Norra Sverige</title>
+  <title>Karta över nationella minoriteter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-sA+e2tGDLpWmdYwHcMdL1fHsW3YyZIwM0s4mnR2wCGA=" 
-    crossorigin=""
-  />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    #map {
-      height: 100vh;
-      width: 100%;
-    }
-
-    .popup-content {
-      max-width: 300px;
-    }
-
-    h3 {
-      margin-top: 0;
-    }
+    html, body { margin: 0; padding: 0; height: 100%; }
+    #map { height: 100vh; }
+    .leaflet-popup-content { font-size: 1rem; }
   </style>
 </head>
 <body>
+  <div id="map"></div>
 
-<div id="map"></div>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([66.5, 20], 5); // Norra Sverige
 
-<script 
-  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-o9N1jrvv2GZPNqgakqbP2GVr5cZ0pniNXyM1g1LwRVs="
-  crossorigin="">
-</script>
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 10,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
 
-<script>
-  const map = L.map('map').setView([66.5, 20.5], 5.2);
+    const minoriteter = [
+      {
+        namn: "Samer",
+        plats: [67.5, 20.2],
+        text: "Samerna är Sveriges ursprungsbefolkning och bor främst i Norrbottens och Västerbottens län. De är kända för sin renskötsel, sitt språk samiska och en stark naturkultur."
+      },
+      {
+        namn: "Tornedalingar",
+        plats: [66.1, 23.5],
+        text: "Tornedalingarna bor längs Torne älv i Norrbottens län och talar meänkieli. De har en rik kultur influerad av både svenska och finska traditioner."
+      },
+      {
+        namn: "Kväner",
+        plats: [66.5, 22],
+        text: "Kväner är en folkgrupp med rötter i finska bönder och fiskare. De är främst bosatta i Norge, men har kulturella band till Sverige och Tornedalen."
+      },
+      {
+        namn: "Sverigefinnar",
+        plats: [65.8, 17.5],
+        text: "Sverigefinnar är personer med finskt ursprung i Sverige. De utgör Sveriges största nationella minoritet och har en tvåspråkig identitet."
+      }
+    ];
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap medverkande'
-  }).addTo(map);
-
-  const groups = [
-    {
-      name: "Samerna",
-      coords: [ [68.5, 19.5], [68.3, 23.5], [67.5, 24.5], [66.8, 21.5], [67.2, 19.5] ],
-      color: "#a6c8e0",
-      content: "<h3>Samerna</h3><p>Sveriges ursprungsbefolkning. Bosatta i norra Norrbotten och Västerbotten. Traditionell kultur med renskötsel och samiska språk.</p>"
-    },
-    {
-      name: "Tornedalingar",
-      coords: [ [67.9, 23.5], [67.9, 24.1], [66.8, 24.1], [66.8, 23.5] ],
-      color: "#c2d7ee",
-      content: "<h3>Tornedalingar</h3><p>Nationell minoritet i Tornedalen, längs Torne älv. Talar meänkieli, stark finsk-svensk kultur.</p>"
-    },
-    {
-      name: "Kväner",
-      coords: [ [69.0, 21.0], [69.0, 23.0], [68.6, 23.0], [68.6, 21.0] ],
-      color: "#d8e6f4",
-      content: "<h3>Kväner</h3><p>Härstammar från finska bönder/fiskare. Större närvaro i Nordnorge, men har historiska kopplingar till nordligaste Sverige.</p>"
-    },
-    {
-      name: "Sverigefinnar",
-      coords: [ [65.8, 19.0], [65.8, 21.0], [65.2, 21.0], [65.2, 19.0] ],
-      color: "#e6eff9",
-      content: "<h3>Sverigefinnar</h3><p>Personer med finskt ursprung bosatta i Sverige, främst i norra delen. Tvåkulturell identitet.</p>"
-    }
-  ];
-
-  groups.forEach(group => {
-    L.polygon(group.coords, {
-      color: '#3c486b',
-      fillColor: group.color,
-      fillOpacity: 0.6
-    }).addTo(map)
-      .bindPopup(`<div class="popup-content">${group.content}</div>`);
-  });
-</script>
-
+    minoriteter.forEach(m => {
+      L.marker(m.plats)
+        .addTo(map)
+        .bindPopup(`<strong>${m.namn}</strong><br>${m.text}`);
+    });
+  </script>
 </body>
 </html>
