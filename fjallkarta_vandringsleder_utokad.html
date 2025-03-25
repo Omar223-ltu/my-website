@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c37b580c4caed5385e1e7f68cf96cf26 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c37b580c4caed5385e1e7f68cf96cf26" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c37b580c4caed5385e1e7f68cf96cf26 = L.map(
+                "map_c37b580c4caed5385e1e7f68cf96cf26",
+                {
+                    center: [67.5, 19.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_26dafd962e0744e842977414a705aa79 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c37b580c4caed5385e1e7f68cf96cf26);
+        
+    
+            var poly_line_f794c74d9be944bc0054acd07bfffe2b = L.polyline(
+                [[68.358, 18.82], [67.9, 18.52], [67.86, 18.27], [67.83, 18.1], [67.9, 17.75], [67.85, 18.1], [67.85, 18.5]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c37b580c4caed5385e1e7f68cf96cf26);
+        
+    
+        var popup_cfe51749e5e45fefd9128bf2c5057839 = L.popup({"maxWidth": 250});
+
+        
+            var html_14138ebad290aa8cca951940cdba9817 = $(`<div id="html_14138ebad290aa8cca951940cdba9817" style="width: 100.0%; height: 100.0%;"><strong>Kungsleden (Abisko - Nikkaluokta)</strong><br>Svårighetsgrad: Medel<br><a href="https://www.svenskaturistforeningen.se/guider-tips/leder/kungsleden/" target="_blank">Läs mer</a></div>`)[0];
+            popup_cfe51749e5e45fefd9128bf2c5057839.setContent(html_14138ebad290aa8cca951940cdba9817);
+        
+
+        poly_line_f794c74d9be944bc0054acd07bfffe2b.bindPopup(popup_cfe51749e5e45fefd9128bf2c5057839)
+        ;
+
+        
+    
+    
+            poly_line_f794c74d9be944bc0054acd07bfffe2b.bindTooltip(
+                `<div>
+                     Kungsleden (Abisko - Nikkaluokta) (Medel)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6f38a61698f5f5ecf5c6f8e637fbe358 = L.polyline(
+                [[66.9, 17.7], [67.1, 17.2], [67.3, 16.9], [67.4, 16.4], [67.6, 16.3]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c37b580c4caed5385e1e7f68cf96cf26);
+        
+    
+        var popup_e4fa53460ed55fa93264d5a051bbead4 = L.popup({"maxWidth": 250});
+
+        
+            var html_14327e8849655301f5e25812150fe04a = $(`<div id="html_14327e8849655301f5e25812150fe04a" style="width: 100.0%; height: 100.0%;"><strong>Padjelantaleden</strong><br>Svårighetsgrad: Medel<br><a href="https://www.padjelanta.com/" target="_blank">Läs mer</a></div>`)[0];
+            popup_e4fa53460ed55fa93264d5a051bbead4.setContent(html_14327e8849655301f5e25812150fe04a);
+        
+
+        poly_line_6f38a61698f5f5ecf5c6f8e637fbe358.bindPopup(popup_e4fa53460ed55fa93264d5a051bbead4)
+        ;
+
+        
+    
+    
+            poly_line_6f38a61698f5f5ecf5c6f8e637fbe358.bindTooltip(
+                `<div>
+                     Padjelantaleden (Medel)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_27c0adc7f2ca539bc9f064e517d924b3 = L.polyline(
+                [[68.425, 18.316], [68.41, 18.4], [68.395, 18.46], [68.386, 18.525]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c37b580c4caed5385e1e7f68cf96cf26);
+        
+    
+        var popup_b41546d5318c17f7c029321d70953f37 = L.popup({"maxWidth": 250});
+
+        
+            var html_27d4fcdccbd17a783af692990f8dacb2 = $(`<div id="html_27d4fcdccbd17a783af692990f8dacb2" style="width: 100.0%; height: 100.0%;"><strong>Dagstur till Trollsjön</strong><br>Svårighetsgrad: Lätt<br><a href="https://www.swedishtouristassociation.com/facilities/trollsjon/" target="_blank">Läs mer</a></div>`)[0];
+            popup_b41546d5318c17f7c029321d70953f37.setContent(html_27d4fcdccbd17a783af692990f8dacb2);
+        
+
+        poly_line_27c0adc7f2ca539bc9f064e517d924b3.bindPopup(popup_b41546d5318c17f7c029321d70953f37)
+        ;
+
+        
+    
+    
+            poly_line_27c0adc7f2ca539bc9f064e517d924b3.bindTooltip(
+                `<div>
+                     Dagstur till Trollsjön (Lätt)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f7d217708b79bcfbbf2b3a80eb437d37 = L.polyline(
+                [[67.713, 17.545], [67.65, 17.0], [67.58, 16.7], [67.5, 16.5]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c37b580c4caed5385e1e7f68cf96cf26);
+        
+    
+        var popup_c8344013f64c5f06386ab10c5b669274 = L.popup({"maxWidth": 250});
+
+        
+            var html_5b9476c6654a1ee09a8a58cd8b6866bc = $(`<div id="html_5b9476c6654a1ee09a8a58cd8b6866bc" style="width: 100.0%; height: 100.0%;"><strong>Sarek Nationalpark - Ritsem till Skarja</strong><br>Svårighetsgrad: Svår<br><a href="https://www.sverigesnationalparker.se/park/sarek-nationalpark/" target="_blank">Läs mer</a></div>`)[0];
+            popup_c8344013f64c5f06386ab10c5b669274.setContent(html_5b9476c6654a1ee09a8a58cd8b6866bc);
+        
+
+        poly_line_f7d217708b79bcfbbf2b3a80eb437d37.bindPopup(popup_c8344013f64c5f06386ab10c5b669274)
+        ;
+
+        
+    
+    
+            poly_line_f7d217708b79bcfbbf2b3a80eb437d37.bindTooltip(
+                `<div>
+                     Sarek Nationalpark - Ritsem till Skarja (Svår)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ef0074429e633209f96000a857227c46 = L.polyline(
+                [[65.82, 15.09], [65.88, 15.05]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c37b580c4caed5385e1e7f68cf96cf26);
+        
+    
+        var popup_a8f6d3b30af43701d2c6868c29663025 = L.popup({"maxWidth": 250});
+
+        
+            var html_98b2cd1eebe13e267ebd6799716f5497 = $(`<div id="html_98b2cd1eebe13e267ebd6799716f5497" style="width: 100.0%; height: 100.0%;"><strong>Lilla Kungsleden (Hemavan - Viterskalet)</strong><br>Svårighetsgrad: Lätt<br><a href="https://www.hemavan.nu/sv/lilla-kungsleden" target="_blank">Läs mer</a></div>`)[0];
+            popup_a8f6d3b30af43701d2c6868c29663025.setContent(html_98b2cd1eebe13e267ebd6799716f5497);
+        
+
+        poly_line_ef0074429e633209f96000a857227c46.bindPopup(popup_a8f6d3b30af43701d2c6868c29663025)
+        ;
+
+        
+    
+    
+            poly_line_ef0074429e633209f96000a857227c46.bindTooltip(
+                `<div>
+                     Lilla Kungsleden (Hemavan - Viterskalet) (Lätt)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
