@@ -341,7 +341,6 @@
     const nav = document.getElementById('main-nav');
     nav.classList.toggle('active');
   }
-  
   function checkQuiz() {
   const answers = {
     q1: 'a',
@@ -377,16 +376,8 @@
   const resultText = `Du fick ${score} av 3 rätt!`;
   document.getElementById('quiz-result').textContent = resultText;
 }
-    let score = 0;
-    for (let key in answers) {
-      const selected = document.querySelector(`input[name="${key}"]:checked`);
-      if (selected && selected.value === answers[key]) {
-        score++;
-      }
-    }
-    const resultText = `Du fick ${score} av 3 rätt!`;
-    document.getElementById('quiz-result').textContent = resultText;
-  }
+    
 </script>
 </body>
 </html>
+
