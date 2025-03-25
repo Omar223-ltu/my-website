@@ -262,33 +262,6 @@
   </div>
 </section>
 
-<section id="quiz" style="background-color: #7a89a1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
-  <h2 class="fade-in">Quiz: Hur mycket vet du om hållbar fjällturism?</h2>
-  <div class="content" style="color: #333; background: white;">
-    <form id="quiz-form">
-      <p><strong>1. Vad är ett exempel på hållbar turism?</strong><br>
-        <label><input type="radio" name="q1" value="a"> Att ta med sig eget skräp hem</label><br>
-        <label><input type="radio" name="q1" value="b"> Att mata vilda djur</label><br>
-        <label><input type="radio" name="q1" value="c"> Att ta souvenirer från naturen</label>
-      </p>
-      <p><strong>2. Vad bör du tänka på när du väljer boende i fjällen?</strong><br>
-        <label><input type="radio" name="q2" value="a"> Att det är billigt</label><br>
-        <label><input type="radio" name="q2" value="b"> Att det är miljömärkt</label><br>
-        <label><input type="radio" name="q2" value="c"> Att det har många gäster</label>
-      </p>
-      <p><strong>3. Hur kan du bäst stötta lokalbefolkningen?</strong><br>
-        <label><input type="radio" name="q3" value="a"> Genom att köpa importerade varor</label><br>
-        <label><input type="radio" name="q3" value="b"> Genom att bojkotta lokala företag</label><br>
-        <label><input type="radio" name="q3" value="c"> Genom att handla lokalt och använda lokala guider</label>
-      </p>
-      <button type="button" onclick="checkQuiz()">Se resultat</button>
-    </form>
-    <p id="quiz-result" style="margin-top: 20px; font-weight: bold;"></p>
-  </div>
-</section>
-  </div>
-</section>
-
   <section id="framja" style="background-color: #405173; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: white;">
     <h2 class="fade-in">Främja lokalbefolkningen</h2>
   </section>
@@ -325,41 +298,6 @@
     const nav = document.getElementById('main-nav');
     nav.classList.toggle('active');
   }
-  function checkQuiz() {
-  const answers = {
-    q1: 'a',
-    q2: 'b',
-    q3: 'c'
-  };
-  let score = 0;
-
-  // Clear previous styles
-  document.querySelectorAll('#quiz-form label').forEach(label => {
-    label.style.color = '#333';
-    label.style.fontWeight = 'normal';
-  });
-
-  for (let key in answers) {
-    const options = document.querySelectorAll(input[name="${key}"]);
-    options.forEach(option => {
-      const label = option.parentElement;
-      if (option.value === answers[key]) {
-        label.style.color = 'green';
-        label.style.fontWeight = 'bold';
-      }
-      if (option.checked && option.value !== answers[key]) {
-        label.style.color = 'red';
-        label.style.fontWeight = 'bold';
-      }
-      if (option.checked && option.value === answers[key]) {
-        score++;
-      }
-    });
-  }
-
-  const resultText = Du fick ${score} av 3 rätt!;
-  document.getElementById('quiz-result').textContent = resultText;
-}
     
 </script>
 </body>
