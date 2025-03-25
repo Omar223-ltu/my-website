@@ -291,7 +291,30 @@
     <h2 class="fade-in">Ekologisk hållbarhet</h2>
   </section>
 
-  <section id="omoss" style="background-color: #7a89a1; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: white;">
+  <section id="omoss" style="background-color: #7a89a1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+  <h2 class="fade-in">Om oss</h2>
+  <div class="content">
+    <h3>Quiz: Hur mycket vet du om hållbar fjällturism?</h3>
+    <form id="quiz-form">
+      <p><strong>1. Vad är ett exempel på hållbar turism?</strong><br>
+        <label><input type="radio" name="q1" value="a"> Att ta med sig eget skräp hem</label><br>
+        <label><input type="radio" name="q1" value="b"> Att mata vilda djur</label><br>
+        <label><input type="radio" name="q1" value="c"> Att ta souvenirer från naturen</label>
+      </p>
+      <p><strong>2. Vad bör du tänka på när du väljer boende i fjällen?</strong><br>
+        <label><input type="radio" name="q2" value="a"> Att det är billigt</label><br>
+        <label><input type="radio" name="q2" value="b"> Att det är miljömärkt</label><br>
+        <label><input type="radio" name="q2" value="c"> Att det har många gäster</label>
+      </p>
+      <p><strong>3. Hur kan du bäst stötta lokalbefolkningen?</strong><br>
+        <label><input type="radio" name="q3" value="a"> Genom att köpa importerade varor</label><br>
+        <label><input type="radio" name="q3" value="b"> Genom att bojkotta lokala företag</label><br>
+        <label><input type="radio" name="q3" value="c"> Genom att handla lokalt och använda lokala guider</label>
+      </p>
+      <button type="button" onclick="checkQuiz()">Se resultat</button>
+    </form>
+    <p id="quiz-result" style="margin-top: 20px; font-weight: bold;"></p>
+  </div>
     <h2 class="fade-in">Om oss</h2>
   </section>
 
