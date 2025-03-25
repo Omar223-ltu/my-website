@@ -1,59 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <title>Karta över nationella minoriteter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Leaflet CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interaktiv karta över Sveriges minoriteter</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
-    html, body { margin: 0; padding: 0; height: 100%; }
-    #map { height: 100vh; }
-    .leaflet-popup-content { font-size: 1rem; }
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .leaflet-popup-content {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
   <div id="map"></div>
 
-  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    const map = L.map('map').setView([66.5, 20], 5); // Norra Sverige
+    const map = L.map('map').setView([66.5, 20.5], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 10,
-      attribution: '© OpenStreetMap'
+      attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    const minoriteter = [
-      {
-        namn: "Samer",
-        plats: [67.5, 20.2],
-        text: "Samerna är Sveriges ursprungsbefolkning och bor främst i Norrbottens och Västerbottens län. De är kända för sin renskötsel, sitt språk samiska och en stark naturkultur."
-      },
-      {
-        namn: "Tornedalingar",
-        plats: [66.1, 23.5],
-        text: "Tornedalingarna bor längs Torne älv i Norrbottens län och talar meänkieli. De har en rik kultur influerad av både svenska och finska traditioner."
-      },
-      {
-        namn: "Kväner",
-        plats: [66.5, 22],
-        text: "Kväner är en folkgrupp med rötter i finska bönder och fiskare. De är främst bosatta i Norge, men har kulturella band till Sverige och Tornedalen."
-      },
-      {
-        namn: "Sverigefinnar",
-        plats: [65.8, 17.5],
-        text: "Sverigefinnar är personer med finskt ursprung i Sverige. De utgör Sveriges största nationella minoritet och har en tvåspråkig identitet."
-      }
-    ];
+    // Samer
+    L.circle([67.5, 21.0], {
+      radius: 90000,
+      color: 'red',
+      fillOpacity: 0.4
+    }).addTo(map).bindPopup(`
+      <strong>Samerna</strong><br>
+      Sveriges ursprungsbefolkning med tradition inom renskötsel, jakt och fiske. 
+      De bor främst i Norrbotten och Västerbotten.<br>
+      <em>Källa: sweden.se</em>
+    `);
 
-    minoriteter.forEach(m => {
-      L.marker(m.plats)
-        .addTo(map)
-        .bindPopup(`<strong>${m.namn}</strong><br>${m.text}`);
-    });
+    // Tornedalingar
+    L.circle([66.1, 23.6], {
+      radius: 60000,
+      color: 'blue',
+      fillOpacity: 0.4
+    }).addTo(map).bindPopup(`
+      <strong>Tornedalingar</strong><br>
+      Nationell minoritet i Tornedalen. Språket är meänkieli.<br>
+      <em>Källa: Euronews</em>
+    `);
+
+    // Kväner
+    L.circle([68.5, 19.5], {
+      radius: 40000,
+      color: 'green',
+      fillOpacity: 0.4
+    }).addTo(map).bindPopup(`
+      <strong>Kväner</strong><br>
+      Härstammar från finska invandrare. Bosatta främst i Nordnorge, men har historisk koppling till norra Sverige.<br>
+      <em>Källa: Fenno-Ugria</em>
+    `);
+
+    // Sverigefinnar
+    L.circle([64.7, 18.0], {
+      radius: 70000,
+      color: 'orange',
+      fillOpacity: 0.4
+    }).addTo(map).bindPopup(`
+      <strong>Sverigefinnar</strong><br>
+      Den största nationella minoriteten. Finskt ursprung och tvåspråkig identitet.<br>
+      <em>Källa: sweden.se</em>
+    `);
   </script>
 </body>
 </html>
