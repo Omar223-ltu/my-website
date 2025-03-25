@@ -341,6 +341,7 @@
     const nav = document.getElementById('main-nav');
     nav.classList.toggle('active');
   }
+  
   function checkQuiz() {
   const answers = {
     q1: 'a',
@@ -352,6 +353,7 @@
   // Clear previous styles
   document.querySelectorAll('#quiz-form label').forEach(label => {
     label.style.color = '#333';
+    label.style.fontWeight = 'normal';
   });
 
   for (let key in answers) {
@@ -360,18 +362,21 @@
       const label = option.parentElement;
       if (option.value === answers[key]) {
         label.style.color = 'green';
+        label.style.fontWeight = 'bold';
       }
       if (option.checked && option.value !== answers[key]) {
         label.style.color = 'red';
+        label.style.fontWeight = 'bold';
       }
       if (option.checked && option.value === answers[key]) {
         score++;
       }
     });
   }
+
   const resultText = `Du fick ${score} av 3 rätt!`;
   document.getElementById('quiz-result').textContent = resultText;
-};
+}
     let score = 0;
     for (let key in answers) {
       const selected = document.querySelector(`input[name="${key}"]:checked`);
@@ -385,10 +390,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
