@@ -168,19 +168,25 @@
       let score = 0;
 
       questions.forEach((q) => {
-        const selected = q.querySelector('input[type=\"radio\"]:checked');
+        const selected = q.querySelector('input[type="radio"]:checked');
         const labels = q.querySelectorAll('label');
         labels.forEach(label => label.classList.remove('correct', 'incorrect'));
 
         if (selected) {
-          if (selected.value === \"1\") {
+          if (selected.value === "1") {
             score++;
             selected.parentElement.classList.add('correct');
           } else {
             selected.parentElement.classList.add('incorrect');
-            q.querySelector('input[value=\"1\"]').parentElement.classList.add('correct');
+            const correctInput = q.querySelector('input[value="1"]');
+            if (correctInput) correctInput.parentElement.classList.add('correct');
           }
         }
       });
 
-      document.getElementBy
+      document.getElementById('result').innerText = `Du fick ${score} av ${questions.length} rätt.`;
+    }
+  </script>
+</body>
+</html>
+
