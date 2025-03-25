@@ -245,7 +245,7 @@
   ☰
 </div>
 <nav id="main-nav" style="align-items: center; justify-content: space-between; padding: 0 20px;">
-  <a href="#start"><img src="fjallkortet-logo-transparent.png" alt="Fjällkortet logotyp" style="height: 40px; margin-right: 20px;"></a><div class="nav-links" style="display: flex; gap: 30px; justify-content: center; flex: 1;">
+  <a href="#start"><img src="fjallkortet-logo-trans.png" alt="Fjällkortet logotyp" style="height: 40px; margin-right: 20px;"></a>$1<div class="nav-links" style="display: flex; gap: 30px; justify-content: center;">
   <a href="#start">Hem</a>
   <a href="#forberedelser">Förberedelser</a>
   <a href="#framja">Främja lokalbefolkningen</a>
@@ -255,7 +255,7 @@
 </nav>
 
   <section id="start">
-    <img src="fjallkortet-logo-transparent.png" alt="Fjällkortet logo">
+    <img src="fjallkortet-logo.png" alt="Fjällkortet logo">
   <div class="start-controls" style="position: absolute; bottom: 40px; display: flex; flex-direction: column; align-items: center;">
       <button onclick="document.getElementById('forberedelser').scrollIntoView({ behavior: 'smooth' });" style="padding: 10px 20px; background-color: #3c486b; color: #f0c3cb; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;">Utforska mer</button>
       <div class="scroll-down" style="margin-top: 15px; width: 30px; height: 30px; border: solid white; border-width: 0 3px 3px 0; transform: rotate(45deg); animation: bounce 2s infinite;"></div>
@@ -263,38 +263,29 @@
   </section>
 
   <section id="forberedelser" style="background-color: #2d3e5c; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
-  <h2 class="fade-in">Förberedelser</h2>
+  <h1 class="fade-in">Förberedelser</h1>
   <div class="grid" style="margin-top: 20px;">
     <div class="card">
-      <img src="packing.png" alt="Packningslista">
+      <img src="images/packing.jpg" alt="Packningslista">
       <h3>Packningslista</h3>
       <a href="packningslista.html">Skapa din packningslista</a>
     </div>
     <div class="card">
-      <img src="Destination.png" alt="Destination">
+      <img src="images/destination.jpg" alt="Destination">
       <h3>Destination</h3>
       <a href="destination.html">Att välja destination</a>
     </div>
     <div class="card">
       <img src="images/packtips.jpg" alt="Packningstips">
-      <h3>Packningstips</h3>
-      <a href="packtips.html">Att tänka på vid packning</a>
+      <h3>Quiz</h3>
+      <a href="#quiz">Testa dina kunskaper i hållbar turism</a>
     </div>
   </div>
 </section>
 
-  <section id="framja" style="background-color: #405173; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: white;">
-    <h2 class="fade-in">Främja lokalbefolkningen</h2>
-  </section>
-
-  <section id="ekologisk" style="background-color: #58678a; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: white;">
-    <h2 class="fade-in">Ekologisk hållbarhet</h2>
-  </section>
- <section id="omoss" style="background-color: #7a89a1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
-  
-  <h2 class="fade-in">Om oss</h2>
-  <div class="content" style="color: #333;">
-    <h3>Quiz: Hur mycket vet du om hållbar fjällturism?</h3>
+<section id="quiz" style="background-color: #7a89a1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+  <h2 class="fade-in">Quiz: Hur mycket vet du om hållbar fjällturism?</h2>
+  <div class="content" style="color: #333; background: white;">
     <form id="quiz-form">
       <p><strong>1. Vad är ett exempel på hållbar turism?</strong><br>
         <label><input type="radio" name="q1" value="a"> Att ta med sig eget skräp hem</label><br>
@@ -315,7 +306,19 @@
     </form>
     <p id="quiz-result" style="margin-top: 20px; font-weight: bold;"></p>
   </div>
-    </section>
+</section>
+  </div>
+</section>
+
+  <section id="framja" style="background-color: #405173; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: white;">
+    <h2 class="fade-in">Främja lokalbefolkningen</h2>
+  </section>
+
+  <section id="ekologisk" style="background-color: #58678a; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: white;">
+    <h2 class="fade-in">Ekologisk hållbarhet</h2>
+  </section>
+
+  
 
 <script>
   window.addEventListener('scroll', function() {
@@ -380,4 +383,5 @@
 </script>
 </body>
 </html>
+
 
