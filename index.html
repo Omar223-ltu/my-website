@@ -341,6 +341,47 @@
     const nav = document.getElementById('main-nav');
     nav.classList.toggle('active');
   }
+  function checkQuiz() {
+  const answers = {
+    q1: 'a',
+    q2: 'b',
+    q3: 'c'
+  };
+  let score = 0;
+
+  // Clear previous styles
+  document.querySelectorAll('#quiz-form label').forEach(label => {
+    label.style.color = '#333';
+  });
+
+  for (let key in answers) {
+    const options = document.querySelectorAll(`input[name="${key}"]`);
+    options.forEach(option => {
+      const label = option.parentElement;
+      if (option.value === answers[key]) {
+        label.style.color = 'green';
+      }
+      if (option.checked && option.value !== answers[key]) {
+        label.style.color = 'red';
+      }
+      if (option.checked && option.value === answers[key]) {
+        score++;
+      }
+    });
+  }
+  const resultText = `Du fick ${score} av 3 rätt!`;
+  document.getElementById('quiz-result').textContent = resultText;
+};
+    let score = 0;
+    for (let key in answers) {
+      const selected = document.querySelector(`input[name="${key}"]:checked`);
+      if (selected && selected.value === answers[key]) {
+        score++;
+      }
+    }
+    const resultText = `Du fick ${score} av 3 rätt!`;
+    document.getElementById('quiz-result').textContent = resultText;
+  }
 </script>
 </body>
 </html>
